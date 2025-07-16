@@ -1,70 +1,186 @@
-/* Reset */
+/* Reset & Base */
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
-  background-color: #f9f9f9;
-  color: #333333;
-  line-height: 1.6;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f9f9f9;
+    color: #333333;
+    line-height: 1.6;
+    font-size: 16px;
 }
 
+a {
+    color: #003366;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #66cccc;
+}
+
+/* Header / Navigation */
 header {
-  background-color: #003366;
-  color: white;
-  padding: 20px;
+    background-color: #003366;
+    color: white;
+    padding: 20px;
 }
 
 header nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
 }
 
 header nav a {
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: 500;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 5px 10px;
+    border-radius: 3px;
+    transition: background-color 0.3s;
 }
 
 header nav a:hover {
-  color: #66cccc;
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
+/* Container */
 .container {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 0 20px;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
 }
 
+/* Typography */
 h1, h2, h3 {
-  font-family: 'Poppins', sans-serif;
-  color: #003366;
+    font-family: 'Poppins', sans-serif;
+    color: #003366;
 }
 
-button, a.button {
-  background-color: #66cccc;
-  color: #003366;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 4px;
-  text-decoration: none;
-  display: inline-block;
-  margin-top: 20px;
-  transition: 0.3s;
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
 }
 
-button:hover, a.button:hover {
-  background-color: #55bbbb;
+h2 {
+    font-size: 2rem;
+    margin-top: 40px;
+    margin-bottom: 20px;
 }
 
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/* Buttons */
+button, .button {
+    background-color: #66cccc;
+    color: #003366;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+    transition: 0.3s;
+    font-weight: 500;
+}
+
+button:hover, .button:hover {
+    background-color: #55bbbb;
+}
+
+/* Sections */
+.intro {
+    font-size: 1.2rem;
+    margin: 20px 0;
+}
+
+.about p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #555;
+}
+
+.highlights {
+    margin-top: 40px;
+}
+
+.highlights h2 {
+    margin-bottom: 10px;
+}
+
+.highlight-list {
+    list-style-type: disc;
+    padding-left: 20px;
+    color: #555;
+}
+
+.highlight-list li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+/* Footer */
 footer {
-  background-color: #003366;
-  color: white;
-  text-align: center;
-  padding: 15px 0;
-  margin-top: 40px;
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 40px;
+    font-size: 0.9rem;
+}
+
+/* Page Specific Styling (Optional) */
+.page-title {
+    text-align: center;
+    margin: 40px 0 20px;
+    font-size: 2rem;
+}
+
+/* Forms (Contact Page) */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+input, textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+textarea {
+    min-height: 120px;
+}
+
+/* Project / Resume Lists */
+ul.project-list, ul.skills-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul.project-list li, ul.skills-list li {
+    background-color: #ffffff;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.05);
+}
+
+ul.project-list li strong {
+    display: block;
+    margin-bottom: 5px;
+    color: #003366;
 }
