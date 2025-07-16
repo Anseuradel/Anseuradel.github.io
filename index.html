@@ -1,53 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Your Name - Data Scientist</title>
+    <meta charset="UTF-8" />
+    <title>Your Name - Data Scientist Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="sidebar">
-    <h1>Your Name</h1>
-    <nav class="nav">
-        <ul>
-            <li><a href="#" class="nav-link active" data-section="home">Home</a></li>
-            <li><a href="#" class="nav-link" data-section="resume">Resume</a></li>
-            <li><a href="#" class="nav-link" data-section="skills">Skills</a></li>
-            <li><a href="#" class="nav-link" data-section="projects">Projects</a></li>
-            <li><a href="#" class="nav-link" data-section="contact">Contact</a></li>
-        </ul>
-    </nav>
-</div>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="profile">
+            <img src="assets/profile.jpg" alt="Your Name">
+            <h1>Your Name</h1>
+            <p>Data Scientist</p>
+        </div>
+        <nav class="nav">
+            <ul>
+                <li><a href="#" class="nav-link active" data-section="home">Home</a></li>
+                <li><a href="#" class="nav-link" data-section="resume">Resume</a></li>
+                <li><a href="#" class="nav-link" data-section="skills">Skills</a></li>
+                <li><a href="#" class="nav-link" data-section="projects">Projects</a></li>
+                <li><a href="#" class="nav-link" data-section="contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="socials">
+            <a href="#">LinkedIn</a> |
+            <a href="#">GitHub</a>
+        </div>
+    </aside>
 
-<div class="main-content">
+    <!-- Main Content -->
+    <main class="main-content">
 
-    <section id="home" class="section active">
-        <h2>Home</h2>
-        <p>Welcome to my data science portfolio.</p>
-    </section>
+        <section id="home" class="section active">
+            <h2>Welcome</h2>
+            <p>This is my data science portfolio.</p>
+        </section>
 
-    <section id="resume" class="section">
-        <h2>Resume</h2>
-        <p>Experience, Education, Achievements.</p>
-    </section>
+        <section id="resume" class="section">
+            <h2>Resume</h2>
+            <p>Education, jobs, certifications...</p>
+        </section>
 
-    <section id="skills" class="section">
-        <h2>Skills & Technologies</h2>
-        <p>Python, ML, Data Viz, SQL, etc.</p>
-    </section>
+        <section id="skills" class="section">
+            <h2>Skills & Technologies</h2>
+            <ul>
+                <li>Python, SQL, Machine Learning</li>
+                <li>Data Visualization</li>
+                <li>ETL Pipelines, Cloud</li>
+            </ul>
+        </section>
 
-    <section id="projects" class="section">
-        <h2>Projects</h2>
-        <p>Key projects I’ve completed.</p>
-    </section>
+        <section id="projects" class="section">
+            <h2>Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">Project 1</div>
+                <div class="project-card">Project 2</div>
+                <div class="project-card">Project 3</div>
+            </div>
+        </section>
 
-    <section id="contact" class="section">
-        <h2>Contact</h2>
-        <p>Email: you@example.com</p>
-    </section>
+        <section id="contact" class="section">
+            <h2>Contact</h2>
+            <p>Email: you@example.com</p>
+        </section>
 
-</div>
+    </main>
 
 <script src="script.js"></script>
 </body>
