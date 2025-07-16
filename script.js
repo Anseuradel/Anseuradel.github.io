@@ -1,4 +1,4 @@
-const navLinks = document.querySelectorAll('nav a');
+const navLinks = document.querySelectorAll('.sidebar nav a');
 const sections = document.querySelectorAll('.section');
 
 navLinks.forEach(link => {
