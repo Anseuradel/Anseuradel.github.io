@@ -2,25 +2,56 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Name | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Your Name</h1>
-        <nav> <!-- links to sections --> </nav>
+        <nav class="navbar">
+            <div class="logo">YourName</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#resume">Resume</a></li>
+                <li><a href="#skills">Skills & Technologies</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <section id="hero">
-        <h2>Creative Developer & Designer</h2>
-        <p>Crafting elegant digital experiences.</p>
+    <section id="home" class="section">
+        <h1>Hello, I'm <span class="accent">Your Name</span></h1>
+        <p>Creative Developer & Problem Solver</p>
     </section>
 
-    <section id="about">...</section>
-    <section id="projects">...</section>
-    <section id="contact">...</section>
+    <section id="resume" class="section">
+        <h2>Resume</h2>
+        <p>Brief overview of your experience and education. Later you can link a downloadable PDF here.</p>
+    </section>
 
-    <footer>© 2025 Your Name</footer>
+    <section id="skills" class="section">
+        <h2>Skills & Technologies</h2>
+        <p>List key skills, technologies, and tools you're proficient with.</p>
+    </section>
+
+    <section id="projects" class="section">
+        <h2>Projects</h2>
+        <p>Highlight a few projects, maybe with links or screenshots later.</p>
+    </section>
+
+    <section id="contact" class="section">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
+        <p>Or connect via LinkedIn / GitHub links.</p>
+    </section>
+
+    <footer>
+        <p>© 2025 Your Name. All rights reserved.</p>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
+
