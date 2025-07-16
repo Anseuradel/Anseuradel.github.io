@@ -1,186 +1,76 @@
-/* Reset & Base */
-* {
-    box-sizing: border-box;
+body {
+    font-family: 'Roboto', sans-serif;
     margin: 0;
+    background-color: #f4f6f8;
+    color: #333;
+}
+
+header.nav {
+    background-color: #003366;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+header.nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
     padding: 0;
 }
 
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f9f9f9;
-    color: #333333;
-    line-height: 1.6;
-    font-size: 16px;
-}
-
-a {
-    color: #003366;
-    text-decoration: none;
-}
-
-a:hover {
-    color: #66cccc;
-}
-
-/* Header / Navigation */
-header {
-    background-color: #003366;
+header.nav a {
     color: white;
-    padding: 20px;
-}
-
-header nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-}
-
-header nav a {
-    color: #ffffff;
     text-decoration: none;
-    font-weight: 500;
-    padding: 5px 10px;
-    border-radius: 3px;
-    transition: background-color 0.3s;
-}
-
-header nav a:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-/* Container */
-.container {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 0 20px;
-}
-
-/* Typography */
-h1, h2, h3 {
-    font-family: 'Poppins', sans-serif;
-    color: #003366;
-}
-
-h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-h2 {
-    font-size: 2rem;
-    margin-top: 40px;
-    margin-bottom: 20px;
-}
-
-h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-}
-
-/* Buttons */
-button, .button {
-    background-color: #66cccc;
-    color: #003366;
-    padding: 10px 20px;
-    border: none;
+    padding: 8px 12px;
     border-radius: 4px;
-    text-decoration: none;
-    display: inline-block;
-    margin-top: 20px;
     transition: 0.3s;
-    font-weight: 500;
 }
 
-button:hover, .button:hover {
-    background-color: #55bbbb;
+header.nav a:hover,
+header.nav a.active {
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
-/* Sections */
-.intro {
-    font-size: 1.2rem;
-    margin: 20px 0;
-}
-
-.about p {
-    font-size: 1rem;
-    line-height: 1.8;
-    color: #555;
-}
-
-.highlights {
-    margin-top: 40px;
-}
-
-.highlights h2 {
-    margin-bottom: 10px;
-}
-
-.highlight-list {
-    list-style-type: disc;
-    padding-left: 20px;
-    color: #555;
-}
-
-.highlight-list li {
-    margin-bottom: 10px;
-    font-size: 1rem;
-}
-
-/* Footer */
-footer {
-    background-color: #003366;
-    color: white;
-    text-align: center;
-    padding: 15px 0;
-    margin-top: 40px;
-    font-size: 0.9rem;
-}
-
-/* Page Specific Styling (Optional) */
-.page-title {
-    text-align: center;
-    margin: 40px 0 20px;
-    font-size: 2rem;
-}
-
-/* Forms (Contact Page) */
-form {
+main {
+    padding-top: 80px;
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
-    gap: 15px;
-    max-width: 500px;
-    margin: 0 auto;
 }
 
-input, textarea {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-family: inherit;
-    font-size: 1rem;
+.section {
+    display: none;
+    max-width: 600px;
+    margin: 20px;
+    padding: 40px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-textarea {
-    min-height: 120px;
-}
-
-/* Project / Resume Lists */
-ul.project-list, ul.skills-list {
-    list-style-type: none;
-    padding-left: 0;
-}
-
-ul.project-list li, ul.skills-list li {
-    background-color: #ffffff;
-    padding: 15px;
-    margin-bottom: 10px;
-    border-radius: 6px;
-    box-shadow: 0 0 5px rgba(0,0,0,0.05);
-}
-
-ul.project-list li strong {
+.section.active {
     display: block;
-    margin-bottom: 5px;
-    color: #003366;
+    opacity: 1;
+    transform: translateY(0);
 }
+
+h1, h2 {
+    color: #003366;
+    font-family: 'Poppins', sans-serif;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
