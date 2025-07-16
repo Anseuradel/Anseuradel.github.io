@@ -1,58 +1,70 @@
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
+    display: flex;
+    height: 100vh;
     background-color: #f4f6f8;
     color: #333;
 }
 
-header.nav {
+.sidebar {
+    width: 220px;
     background-color: #003366;
-    padding: 1rem;
-    position: fixed;
-    width: 100%;
-    top: 0;
-}
-
-header.nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 0;
-}
-
-header.nav a {
     color: white;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 2rem;
+    position: fixed;
+    height: 100vh;
+}
+
+.sidebar h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    color: white;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.sidebar nav a {
+    color: #ccc;
     text-decoration: none;
     padding: 8px 12px;
     border-radius: 4px;
     transition: 0.3s;
 }
 
-header.nav a:hover,
-header.nav a.active {
-    background-color: rgba(255, 255, 255, 0.2);
+.sidebar nav a:hover,
+.sidebar nav a.active {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
 }
 
-main {
-    padding-top: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+.content {
+    margin-left: 220px;
+    padding: 40px;
+    flex: 1;
+    overflow-y: auto;
 }
 
 .section {
     display: none;
-    max-width: 600px;
-    margin: 20px;
-    padding: 40px;
-    background: #fff;
-    border-radius: 12px;
+    background: white;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     opacity: 0;
     transform: translateY(20px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
+    transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
 .section.active {
@@ -73,4 +85,3 @@ ul {
 ul li {
     margin-bottom: 10px;
 }
-
