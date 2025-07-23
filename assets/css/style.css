@@ -1903,16 +1903,13 @@ textarea.form-input::-webkit-resizer { display: none; }
 }
 
 /* ===== COPYRIGHT STYLE ===== */
-.copyright {
-  color: var(--light-gray-70);
-  font-size: var(--fs-7);
+.copyright-notice {
+  color: var(--light-gray-70); /* Same as your contact items */
+  font-size: var(--fs-8); /* Smaller text (11px from your variables) */
+  font-weight: var(--fw-300); /* Light weight like other contact text */
   text-align: center;
-  margin-top: 20px;
+  margin-top: 15px;
   padding-top: 10px;
-  border-top: 1px solid var(--jet); /* Optional separator */
-}
-
-.copyright .name {
-  color: var(--orange-yellow-crayola); /* Accent color */
-  font-weight: var(--fw-500);
+  border-top: 1px solid var(--jet); /* Optional subtle divider */
+  opacity: 0.8; /* Slightly muted like your icons */
 }
