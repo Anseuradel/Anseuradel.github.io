@@ -1886,3 +1886,18 @@ textarea.form-input::-webkit-resizer { display: none; }
   display: block;          /* Removes extra space below */
   border: 3px solid transparent; /* Optional: Smooth transition for hover effects */
 }
+
+.contact-info {
+  white-space: normal !important; /* Overrides any 'nowrap' */
+  word-break: break-word;
+}
+
+.contact-link {
+  display: inline !important;
+  white-space: normal !important;
+  overflow-wrap: anywhere; /* Better for URLs/emails */
+}
+
+.contact-item {
+  align-items: flex-start;
+}
