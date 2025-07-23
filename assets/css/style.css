@@ -1884,3 +1884,10 @@ textarea.form-input::-webkit-resizer { display: none; }
 /**
 	*NEW
 	*/
+
+.avatar-box img {
+  border-radius: 50%; /* Makes the image round */
+  object-fit: cover; /* Ensures the image fills the circle without stretching */
+  width: 80px; /* Match your desired size */
+  height: 80px; /* Must be equal to width for a perfect circle */
+}
