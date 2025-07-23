@@ -1904,26 +1904,22 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 /* ===== COPYRIGHT STYLE ===== */
 /* Add this to your CSS */
+/* Copyright Notice Styling */
 .copyright-notice {
-  color: var(--orange-yellow-crayola); /* Gold icon color */
-  font-size: var(--fs-8); /* 11px - matches your smallest text */
+  color: var(--orange-yellow-crayola) !important; /* Gold color from your icons */
+  font-size: var(--fs-8); /* 11px - matches your small text */
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 5px;
   margin-top: 15px;
   padding-top: 10px;
-  border-top: 1px solid var(--jet); /* Optional divider */
+  border-top: 1px solid var(--jet);
   opacity: 0.9;
-  transition: var(--transition-1);
-}
-
-.copyright-notice:hover {
-  opacity: 1;
-  text-shadow: 0 0 5px hsla(45, 100%, 72%, 0.3); /* Subtle glow */
 }
 
 .copyright-notice ion-icon {
-  font-size: 12px; /* Slightly larger icon */
-  --ionicon-stroke-width: 50px; /* Thicker icon */
+  color: inherit; /* Makes icon same color as text */
+  font-size: 12px;
+  --ionicon-stroke-width: 50px;
 }
