@@ -1901,29 +1901,3 @@ textarea.form-input::-webkit-resizer { display: none; }
 .contact-item {
   align-items: flex-start;
 }
-
-/* ===== COPYRIGHT STYLE ===== */
-/* Copyright Notice Styling */
-.copyright-notice {
-  color: var(--orange-yellow-crayola) !important; /* Gold color from your icons */
-  font-size: var(--fs-8); /* 11px - matches your small text */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 5px;
-  margin-top: 15px;
-  padding-top: 10px;
-  border-top: 1px solid var(--jet);
-  opacity: 0.9;
-}
-
-.copyright-notice ion-icon {
-  color: inherit; /* Makes icon same color as text */
-  font-size: 12px;
-  --ionicon-stroke-width: 50px;
-}
-
-.sidebar .sidebar-info_more .copyright-notice {
-  color: var(--orange-yellow-crayola) !important;
-  /* rest of the styles */
-}
