@@ -1884,12 +1884,12 @@ textarea.form-input::-webkit-resizer { display: none; }
 /**
 	*NEW
 	*/
-
 .avatar-box {
   /* Keep the gradient border but make it circular */
   border-radius: 50%; /* Changed from 20px/30px to 50% */
   padding: 5px; /* Adds space between the image and border */
 }
+
 
 .avatar-box img {
   border-radius: 50%;       /* Ensures the image is round */
