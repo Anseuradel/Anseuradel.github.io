@@ -1886,8 +1886,8 @@ textarea.form-input::-webkit-resizer { display: none; }
 	*/
 
 .avatar-box img {
-  border-radius: 50%; /* Makes the image round */
-  object-fit: cover; /* Ensures the image fills the circle without stretching */
-  width: 80px; /* Match your desired size */
-  height: 80px; /* Must be equal to width for a perfect circle */
+  clip-path: circle(50% at 50% 50%); /* Creates a perfect circle */
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
 }
