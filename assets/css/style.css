@@ -1886,9 +1886,10 @@ textarea.form-input::-webkit-resizer { display: none; }
 	*/
 
 .avatar-box img {
-  border-radius: 50%;       /* Makes it round */
-  width: 120px;            /* Match this to the HTML width */
-  height: 120px;           /* Must equal width for a perfect circle */
-  object-fit: cover;       /* Prevents stretching */
-  display: block;          /* Removes extra space below the image */
+  border-radius: 50%;
+  width: 10vw;             /* 10% of viewport width (adjust as needed) */
+  height: 10vw;            /* Must match width */
+  max-width: 150px;        /* Prevents it from getting too large */
+  max-height: 150px;
+  object-fit: cover;
 }
