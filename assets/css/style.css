@@ -1901,3 +1901,24 @@ textarea.form-input::-webkit-resizer { display: none; }
 .contact-item {
   align-items: flex-start;
 }
+
+
+.copyright-notice {
+  color: var(--orange-yellow-crayola);
+  font-size: var(--fs-8);
+  text-align: center;
+  margin-top: 15px;
+  padding-top: 10px;
+  border-top: 1px solid var(--jet);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+/* If using SVG image */
+.copyright-notice img {
+  width: 12px;
+  height: 12px;
+  filter: brightness(0.9);
+}
