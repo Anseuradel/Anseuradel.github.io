@@ -1903,7 +1903,6 @@ textarea.form-input::-webkit-resizer { display: none; }
 }
 
 /* ===== COPYRIGHT STYLE ===== */
-/* Add this to your CSS */
 /* Copyright Notice Styling */
 .copyright-notice {
   color: var(--orange-yellow-crayola) !important; /* Gold color from your icons */
