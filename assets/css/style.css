@@ -1885,11 +1885,17 @@ textarea.form-input::-webkit-resizer { display: none; }
 	*NEW
 	*/
 
+.avatar-box {
+  /* Keep the gradient border but make it circular */
+  border-radius: 50%; /* Changed from 20px/30px to 50% */
+  padding: 5px; /* Adds space between the image and border */
+}
+
 .avatar-box img {
-  border-radius: 50%;
-  width: 10vw;             /* 10% of viewport width (adjust as needed) */
-  height: 10vw;            /* Must match width */
-  max-width: 150px;        /* Prevents it from getting too large */
-  max-height: 150px;
-  object-fit: cover;
+  border-radius: 50%;       /* Ensures the image is round */
+  width: 120px;            /* Adjust size as needed */
+  height: 120px;           /* Must match width */
+  object-fit: cover;       /* Prevents stretching */
+  display: block;          /* Removes extra space below */
+  border: 3px solid transparent; /* Optional: Smooth transition for hover effects */
 }
