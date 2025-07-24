@@ -137,6 +137,7 @@ let lastClickedBtn = filterBtn[0];
 //     lastClickedBtn = this;
 
 //   });
+// }
 
 for (let i = 0; i < filterBtn.length; i++) {
   filterBtn[i].addEventListener("click", function () {
@@ -150,7 +151,6 @@ for (let i = 0; i < filterBtn.length; i++) {
   });
 }
 
-}
 
 
 
