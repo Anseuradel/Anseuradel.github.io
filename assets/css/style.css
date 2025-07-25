@@ -1936,6 +1936,6 @@ textarea.form-input::-webkit-resizer { display: none; }
 .project-img img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ensures images fill the space without stretching */
-  transition: transform 0.3s ease; /* Optional: for hover effects */
+  object-fit: cover;
+  object-position: center; /* Focus on the center of the image */
 }
