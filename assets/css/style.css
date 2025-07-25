@@ -1922,3 +1922,20 @@ textarea.form-input::-webkit-resizer { display: none; }
   height: 12px;
   filter: brightness(0.9);
 }
+
+/* Portfolio Item Image Container */
+.project-img {
+  position: relative;
+  width: 100%;
+  height: 200px; /* Fixed height */
+  overflow: hidden; /* Hide overflowing parts */
+  border-radius: 8px; /* Optional: match your design */
+}
+
+/* Portfolio Images */
+.project-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures images fill the space without stretching */
+  transition: transform 0.3s ease; /* Optional: for hover effects */
+}
