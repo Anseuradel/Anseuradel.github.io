@@ -10,9 +10,10 @@ jobs:
       
       - name: Inject Secrets
         run: |
-          # Replace placeholders in ALL HTML files
-          find . -name "*.html" -exec sed -i "s|FORMSPREE_ENDPOINT_PLACEHOLDER|${{ secrets.FORMSPREE_ENDPOINT }}|g" {} \;
-          find . -name "*.html" -exec sed -i "s|RECAPTCHA_SITE_KEY_PLACEHOLDER|${{ secrets.RECAPTCHA_SITE_KEY }}|g" {} \;
+          # Force replacement in all HTML files
+          find . -type f -name "*.html" -exec sed -i "s|FORMSPREE_ENDPOINT_PLACEHOLDER|${{ secrets.FORMSPREE_ENDPOINT }}|g" {} \;
+          echo "Replacement done. Checking:"
+          grep -r "formspree.io" . || echo "Replacement failed"
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
