@@ -3,16 +3,16 @@ on: [push]
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write  # Required to push to gh-pages branch
     steps:
       - uses: actions/checkout@v4
-
-      # Replace placeholders with secrets
+      
       - name: Inject Secrets
         run: |
           sed -i "s|FORMSPREE_ENDPOINT_PLACEHOLDER|${{ secrets.FORMSPREE_ENDPOINT }}|g" index.html
           sed -i "s|RECAPTCHA_SITE_KEY_PLACEHOLDER|${{ secrets.RECAPTCHA_SITE_KEY }}|g" index.html
 
-      # Deploy to GitHub Pages
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
