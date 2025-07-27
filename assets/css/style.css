@@ -2038,3 +2038,24 @@ textarea.form-input::-webkit-resizer { display: none; }
     padding: 1rem;
   }
 }
+
+/* Pause animation on hover */
+.skills-carousel:hover .skills-track {
+  animation-play-state: paused; /* Stops scrolling */
+}
+
+/* Enhance the hovered skill item */
+.skill-item:hover {
+  transform: scale(1.1); /* Enlarge by 10% */
+  box-shadow: var(--shadow-4); /* Stronger shadow */
+  z-index: 10; /* Ensure it appears above others */
+  background: var(--bg-gradient-yellow-1); /* Optional: Gold gradient */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth effect */
+}
+
+/* Ensure icons/images also pop */
+.skill-item:hover img,
+.skill-item:hover ion-icon {
+  transform: scale(1.2); /* Grow icons */
+  filter: brightness(1.2); /* Add glow */
+}
