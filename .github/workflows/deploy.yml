@@ -8,25 +8,27 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      # Debug: Verify secrets are accessible
-      - name: Check Secrets
-        run: |
-          echo "FORMSPREE_ENDPOINT exists: ${{ secrets.FORMSPREE_ENDPOINT != '' }}"
-          echo "RECAPTCHA_SITE_KEY exists: ${{ secrets.RECAPTCHA_SITE_KEY != '' }}"
+      # DEBUG: List files before changes
+      - name: List files (before)
+        run: ls -la
 
       # Replace placeholders
       - name: Inject Secrets
         run: |
+          echo "Formspree Endpoint: ${{ secrets.FORMSPREE_ENDPOINT }}"
+          echo "reCAPTCHA Key: ${{ secrets.RECAPTCHA_SITE_KEY }}"
+          
           find . -type f -name "*.html" -exec sed -i \
             "s|FORMSPREE_ENDPOINT_PLACEHOLDER|https://formspree.io/f/${{ secrets.FORMSPREE_ENDPOINT }}|g" {} \;
+          
           find . -type f -name "*.html" -exec sed -i \
             "s|RECAPTCHA_SITE_KEY_PLACEHOLDER|${{ secrets.RECAPTCHA_SITE_KEY }}|g" {} \;
 
-      # Verify replacements
-      - name: Verify Changes
+      # DEBUG: Verify changes
+      - name: Verify replacements
         run: |
-          grep -r "formspree.io" . || echo "Error: Formspree replacement failed!"
-          grep -r "6L" . || echo "Error: reCAPTCHA replacement failed!"
+          grep -r "formspree.io" . || echo "Formspree replacement FAILED"
+          grep -r "data-sitekey=\"6L" . || echo "reCAPTCHA replacement FAILED"
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
