@@ -7,13 +7,26 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v4
-      
+
+      # Debug: Verify secrets are accessible
+      - name: Check Secrets
+        run: |
+          echo "FORMSPREE_ENDPOINT exists: ${{ secrets.FORMSPREE_ENDPOINT != '' }}"
+          echo "RECAPTCHA_SITE_KEY exists: ${{ secrets.RECAPTCHA_SITE_KEY != '' }}"
+
+      # Replace placeholders
       - name: Inject Secrets
         run: |
-          # Force replacement in all HTML files
-          find . -type f -name "*.html" -exec sed -i "s|FORMSPREE_ENDPOINT_PLACEHOLDER|${{ secrets.FORMSPREE_ENDPOINT }}|g" {} \;
-          echo "Replacement done. Checking:"
-          grep -r "formspree.io" . || echo "Replacement failed"
+          find . -type f -name "*.html" -exec sed -i \
+            "s|FORMSPREE_ENDPOINT_PLACEHOLDER|https://formspree.io/f/${{ secrets.FORMSPREE_ENDPOINT }}|g" {} \;
+          find . -type f -name "*.html" -exec sed -i \
+            "s|RECAPTCHA_SITE_KEY_PLACEHOLDER|${{ secrets.RECAPTCHA_SITE_KEY }}|g" {} \;
+
+      # Verify replacements
+      - name: Verify Changes
+        run: |
+          grep -r "formspree.io" . || echo "Error: Formspree replacement failed!"
+          grep -r "6L" . || echo "Error: reCAPTCHA replacement failed!"
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
