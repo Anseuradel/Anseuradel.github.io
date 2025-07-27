@@ -1975,38 +1975,55 @@ textarea.form-input::-webkit-resizer { display: none; }
   width: max-content;
 }
 
+/* ===== Key Change: Match the card styling ===== */
 .skill-item {
+  position: relative; /* Needed for gradient border */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   min-width: 120px;
-  padding: 1rem;
-  background: var(--bg-color-secondary);
-  border-radius: 12px;
-  box-shadow: var(--shadow-1);
+  padding: 1.5rem;
+  border-radius: 14px;
+  z-index: 1;
+  cursor: pointer;
+  /* Gradient border (like other cards) */
+  background: var(--border-gradient-onyx);
+  box-shadow: var(--shadow-2);
 }
 
-.skill-item ion-icon {
-  font-size: 2.4rem;
-  margin-bottom: 0.5rem;
-  color: var(--accent-color);
+/* Inner background (matches your other cards) */
+.skill-item::before {
+  content: "";
+  position: absolute;
+  inset: 1px; /* Creates the "border" effect */
+  background: var(--bg-gradient-jet);
+  border-radius: inherit;
+  z-index: -1;
 }
 
+/* Icon/Logo styling */
+.skill-item ion-icon,
 .skill-item img {
+  font-size: 2.4rem;
   width: 2.4rem;
   height: 2.4rem;
-  object-fit: contain;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.8rem;
+  color: var(--orange-yellow-crayola); /* Gold accent */
 }
 
+/* Text styling */
+.skill-item span {
+  color: var(--white-2); /* Light text */
+  font-size: var(--fs-7);
+  font-weight: var(--fw-400);
+  text-align: center;
+}
+
+/* Animation */
 @keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
 /* Responsive */
@@ -2018,6 +2035,6 @@ textarea.form-input::-webkit-resizer { display: none; }
   
   .skill-item {
     min-width: 100px;
-    padding: 0.8rem;
+    padding: 1rem;
   }
 }
