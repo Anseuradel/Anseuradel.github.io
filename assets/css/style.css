@@ -1941,51 +1941,69 @@ textarea.form-input::-webkit-resizer { display: none; }
 }
 
 
-/* Skills Section */
-.skills {
-  margin-top: 3rem;
+/* Style du carrousel */
+.skills-carousel {
+  margin: 4rem 0;
+  overflow: hidden;
+  position: relative;
 }
 
-.skills-title {
-  margin-bottom: 2rem;
-  text-align: center;
+.skills-container {
+  width: 100%;
+  overflow: hidden;
 }
 
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+.skills-track {
+  display: flex;
   gap: 2rem;
-  margin-bottom: 3rem;
+  padding: 1rem 0;
+  animation: scroll 20s linear infinite;
+  width: max-content;
 }
 
-.skill-category {
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 120px;
+  padding: 1rem;
   background: var(--bg-color-secondary);
-  padding: 1.5rem;
   border-radius: 12px;
   box-shadow: var(--shadow-1);
 }
 
-.category-header {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 1.2rem;
-}
-
-.skill-items {
-  list-style: none;
-  padding-left: 1.5rem;
-}
-
-.skill-items li {
-  position: relative;
-  margin-bottom: 0.8rem;
-}
-
-.skill-items li::before {
-  content: "•";
-  position: absolute;
-  left: -1rem;
+.skill-item ion-icon {
+  font-size: 2.4rem;
+  margin-bottom: 0.5rem;
   color: var(--accent-color);
-  font-size: 1.4rem;
+}
+
+.skill-item img {
+  width: 2.4rem;
+  height: 2.4rem;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .skills-track {
+    gap: 1rem;
+    animation-duration: 15s;
+  }
+  
+  .skill-item {
+    min-width: 100px;
+    padding: 0.8rem;
+  }
 }
