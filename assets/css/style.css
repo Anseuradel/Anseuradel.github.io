@@ -133,18 +133,11 @@ input, textarea {
   font: inherit;
 }
 
-:root {
-  --custom-coral: #FF7F50; /* Add coral */
-  --custom-mint: #98FF98;  /* Add mint */
-}
 
 ::selection {
   background: var(--orange-yellow-crayola);
-  color: var(--smoky-black);
-}
-
-a:hover {
-  color: var(--custom-coral); /* Coral hover */
+/*   color: var(--smoky-black); */
+color: var(--eerie-black-1);
 }
 
 :focus { outline-color: var(--orange-yellow-crayola); }
