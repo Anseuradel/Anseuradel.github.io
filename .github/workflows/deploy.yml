@@ -17,17 +17,10 @@ jobs:
         run: find . -name "*.html" -exec ls -la {} \;
 
       # Replace placeholders (updated command)
-      - name: Inject Secrets
+      - name: Inject reCAPTCHA
         run: |
-          find . -type f -name "*.html" -exec sed -i \
-            "s|FORMSPREE_ENDPOINT_PLACEHOLDER|https://formspree.io/f/${{ secrets.FORMSPREE_ENDPOINT }}|g" {} \;
-          
-          find . -type f -name "*.html" -exec sed -i \
-            "s|RECAPTCHA_SITE_KEY_PLACEHOLDER|${{ secrets.RECAPTCHA_SITE_KEY }}|g" {} \;
-
-          # Verify changes
-          grep -rl "formspree.io" . || echo "Formspree replacement failed"
-          grep -rl "data-sitekey=\"6L" . || echo "reCAPTCHA replacement failed"
+          find . -name "*.html" -exec sed -i \
+          "s|RECAPTCHA_SITE_KEY_PLACEHOLDER|${{ secrets.RECAPTCHA_SITE_KEY }}|g" {} \;
 
       # Debug: Show modified files
       - name: Show modified files
