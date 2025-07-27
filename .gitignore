@@ -1,4 +1,0 @@
-# Ignore config files with keys
-config.js
-.env
-/secret-keys/
