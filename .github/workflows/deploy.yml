@@ -8,30 +8,34 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      # DEBUG: List files before changes
-      - name: List files (before)
-        run: ls -la
+      # Force file permissions
+      - name: Fix permissions
+        run: chmod -R +r .
 
-      # Replace placeholders
+      # Debug: Show files being processed
+      - name: List HTML files
+        run: find . -name "*.html" -exec ls -la {} \;
+
+      # Replace placeholders (updated command)
       - name: Inject Secrets
         run: |
-          echo "Formspree Endpoint: ${{ secrets.FORMSPREE_ENDPOINT }}"
-          echo "reCAPTCHA Key: ${{ secrets.RECAPTCHA_SITE_KEY }}"
-          
           find . -type f -name "*.html" -exec sed -i \
             "s|FORMSPREE_ENDPOINT_PLACEHOLDER|https://formspree.io/f/${{ secrets.FORMSPREE_ENDPOINT }}|g" {} \;
           
           find . -type f -name "*.html" -exec sed -i \
             "s|RECAPTCHA_SITE_KEY_PLACEHOLDER|${{ secrets.RECAPTCHA_SITE_KEY }}|g" {} \;
 
-      # DEBUG: Verify changes
-      - name: Verify replacements
-        run: |
-          grep -r "formspree.io" . || echo "Formspree replacement FAILED"
-          grep -r "data-sitekey=\"6L" . || echo "reCAPTCHA replacement FAILED"
+          # Verify changes
+          grep -rl "formspree.io" . || echo "Formspree replacement failed"
+          grep -rl "data-sitekey=\"6L" . || echo "reCAPTCHA replacement failed"
+
+      # Debug: Show modified files
+      - name: Show modified files
+        run: git diff --name-only
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./
+          force_orphan: true  # Ensures clean deployment
