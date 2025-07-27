@@ -1939,3 +1939,51 @@ textarea.form-input::-webkit-resizer { display: none; }
   object-fit: cover;
   object-position: center; /* Focus on the center of the image */
 }
+
+
+/* Skills Section */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.skill-category {
+  background: var(--bg-color-secondary);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow-1);
+}
+
+.category-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.category-header ion-icon {
+  font-size: 2.4rem;
+  color: var(--accent-color);
+}
+
+.skill-items {
+  list-style: none;
+}
+
+.skill-items li {
+  position: relative;
+  padding-left: 1.8rem;
+  margin-bottom: 0.8rem;
+}
+
+.skill-items li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--accent-color);
+  font-size: 1.4rem;
+}
