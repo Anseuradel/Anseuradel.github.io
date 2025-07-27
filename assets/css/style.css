@@ -143,7 +143,15 @@ input, textarea {
 html { font-family: var(--ff-poppins); }
 
 /* body { background: var(--smoky-black); } */
-body { background: var(--DarkSlateGray); }
+:root {
+  /* Add this line to your existing variables */
+  --DarkSlateGray: darkslategray; /* Built-in CSS color name */
+}
+
+/* Usage example */
+body {
+  background: var(--DarkSlateGray); /* Hex: #2F4F4F */
+}
 
 
 
