@@ -1776,7 +1776,10 @@ textarea.form-input::-webkit-resizer { display: none; }
   body::-webkit-scrollbar { width: 20px; }
 
 /*   body::-webkit-scrollbar-track { background: var(--smoky-black); } */
-  body::-webkit-scrollbar-track { background: var(--DarkSlateGray); }
+  body::-webkit-scrollbar-track { background: linear-gradient(135deg, 
+  #2D323E 0%, 
+  #393F4D 50%, 
+  #454B5B 100%); }
 
   body::-webkit-scrollbar-thumb {
     border: 5px solid var(--orange-yellow-crayola);
