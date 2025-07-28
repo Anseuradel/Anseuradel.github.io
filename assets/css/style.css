@@ -2102,12 +2102,14 @@ body::-webkit-scrollbar-button {
   filter: brightness(1.2); /* Add glow */
 }
 
+/* For standard bullets */
 .timeline-text {
-  list-style-type: disc; /* Shows bullet points */
-  padding-left: 20px; /* Adds proper indentation */
-  margin-left: 15px; /* Adjust spacing */
+  list-style-type: disc;
+  padding-left: 20px;
+  color: var(--orange-yellow-crayola); /* Makes bullets gold */
 }
 
 .timeline-text li {
-  margin-bottom: 8px; /* Space between items */
+  color: var(--light-gray); /* Keeps text light gray */
+  margin-bottom: 8px;
 }
