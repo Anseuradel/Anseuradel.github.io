@@ -146,16 +146,17 @@ html { font-family: var(--ff-poppins); }
 
 /* background color personalization
 /* body { background: var(--smoky-black); } */
-
-:root {
+body { background: linear-gradient(to right, #0f2027, #203a43, #2c5364);}
+/* 
+:root { */
   /* Add this line to your existing variables */
-  --DarkSlateGray: darkslategray; /* Built-in CSS color name */
-}
+/*   --DarkSlateGray: darkslategray; 
+} */
 
 /* Usage example */
-body {
-  background: var(--DarkSlateGray); /* Hex: #2F4F4F */
-}
+/* body {
+  background: var(--DarkSlateGray);
+} */
 
 
 
