@@ -147,9 +147,9 @@ html { font-family: var(--ff-poppins); }
 /* background color personalization
 /* body { background: var(--smoky-black); } */
 body { background: linear-gradient(135deg, 
-  #0d0d0d 0%, 
-  #1c1c1c 50%, 
-  #2e2e2e 100%);}
+  #000000 0%, 
+  #1a1a1a 50%, 
+  #2d2d2d 100%);}
 /* 
 :root { */
   /* Add this line to your existing variables */
