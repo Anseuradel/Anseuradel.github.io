@@ -146,7 +146,7 @@ html { font-family: var(--ff-poppins); }
 
 /* background color personalization
 /* body { background: var(--smoky-black); } */
-body { background: linear-gradient(to right, #0a0a2a, #1a1a4a);;}
+body { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);}
 /* 
 :root { */
   /* Add this line to your existing variables */
