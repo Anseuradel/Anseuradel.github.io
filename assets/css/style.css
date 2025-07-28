@@ -1773,10 +1773,10 @@ textarea.form-input::-webkit-resizer { display: none; }
    * RESET
    */
 
-  body::-webkit-scrollbar { width: 20px; }
+/*   body::-webkit-scrollbar { width: 20px; } */
 
 /*   body::-webkit-scrollbar-track { background: var(--smoky-black); } */
-  body::-webkit-scrollbar-track { background: linear-gradient(135deg, 
+/*   body::-webkit-scrollbar-track { background: linear-gradient(135deg, 
   #2D323E 0%, 
   #393F4D 50%, 
   #454B5B 100%); }
@@ -1787,11 +1787,47 @@ textarea.form-input::-webkit-resizer { display: none; }
     border-radius: 20px;
     box-shadow: inset 1px 1px 0 hsla(0, 0%, 100%, 0.11),
                 inset -1px -1px 0 hsla(0, 0%, 100%, 0.11);
-  }
-
+  } */
+/* 
   body::-webkit-scrollbar-thumb:hover { background: hsla(0, 0%, 100%, 0.15); }
 
-  body::-webkit-scrollbar-button { height: 60px; }
+  body::-webkit-scrollbar-button { height: 60px; } */
+
+/* Scrollbar Container */
+body::-webkit-scrollbar {
+  width: 14px;
+  background: transparent; /* Essential for gradient to show fully */
+}
+
+/* Track */
+body::-webkit-scrollbar-track {
+  background: linear-gradient(to bottom, 
+    #2D323E, 
+    #393F4D 30%, 
+    #454B5B 70%, 
+    #2D323E
+  );
+  background-attachment: fixed; /* Prevents gaps */
+  border-left: 1px solid #4A5165;
+}
+
+/* Thumb */
+body::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, 
+    #393F4D, 
+    #4A5165, 
+    #5A6278
+  );
+  border: 2px solid #2D323E;
+  border-radius: 4px;
+}
+
+/* Buttons (top/bottom arrows) */
+body::-webkit-scrollbar-button {
+  height: 16px;
+  background: #393F4D;
+  border: 1px solid #4A5165;
+}
 
 
 
