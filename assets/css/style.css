@@ -145,10 +145,10 @@ html { font-family: var(--ff-poppins); }
 
 /* background color personalization
 /* body { background: var(--smoky-black); } */
-body { background: linear-gradient(135deg, 
-  #000000 0%, 
-  #1a1a1a 50%, 
-  #2d2d2d 100%);}
+body { background: linear-gradient(145deg, 
+  #f0f0f5 0%, 
+  #d4d4dc 50%, 
+  #b8b8c3 100%);}
 /* 
 :root { */
   /* Add this line to your existing variables */
