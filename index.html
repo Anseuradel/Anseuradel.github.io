@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ANSEUR Adel Personal Portfolio</title>
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!--
+    - #MAIN
+  -->
+
+  <main>
+
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="./assets/images/photo cv v1 (1).png" alt="Anseur Adel" width="120">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Anseur Adel">Anseur Adel</h1>
+
+          <p class="title">Data science student</p>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+          <!-- Email -->
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+              <a href="mailto:adelanseur@hotmail.fr" class="contact-link">adelanseur@hotmail.fr</a>
+            </div>
+          </li>
+
+          <!-- LinkedIn -->
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">LinkedIn</p>
+              <a href="https://www.linkedin.com/in/adel-anseur1234" class="contact-link" target="_blank">linkedin.com/in/adel-anseur1234</a>
+            </div>
+          </li>
+
+          <!-- GitHub -->
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="logo-github"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">GitHub</p>
+              <a href="https://github.com/Anseuradel" class="contact-link" target="_blank">github.com/Anseuradel</a>
+            </div>
+          </li>
+
+          <!-- Kaggle -->
+          <li class="contact-item">
+            <div class="icon-box">
+              <img width="24" height="24" src="https://img.icons8.com/external-tal-revivo-regular-tal-revivo/24/fcc419/external-kaggle-an-online-community-of-data-scientists-and-machine-learners-owned-by-google-logo-regular-tal-revivo.png" alt="external-kaggle-an-online-community-of-data-scientists-and-machine-learners-owned-by-google-logo-regular-tal-revivo"/>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Kaggle</p>
+              <a href="https://www.kaggle.com/adelanseur" class="contact-link" target="_blank">kaggle.com/adelanseur</a>
+            </div>
+          </li>
+
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Location</p>   
+              <address>France, Argenteuil 95100</address>
+            </div>
+          </li>
+
+        </ul>
+        
+          <div class="copyright-notice">
+            &copy; 2025 • ANSEUR Adel
+          </div>
+   </aside>
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+      <nav class="navbar">
+        <ul class="navbar-list">
+          <li class="navbar-item">
+            <button class="navbar-link active" data-nav-link>About</button>
+          </li>
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Resume</button>
+          </li>
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Portfolio</button>
+          </li>
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Contact</button>
+          </li>
+        </ul>
+      </nav>
+
+      <!--
+        - #ABOUT
+      -->
+      <article class="about active" data-page="about">
+        <header>
+          <h2 class="h2 article-title">About me</h2>
+        </header>
+        <section class="about-text">
+          <p>
+            My name is Adel, and i have a strong passion for data science and statistics.
+            I find the intersection of data analysis and problem-solving fascinating, and i am excited to apply my skills and knowledge to real-world scenarios.
+            With a background in engineering and big data, I have developed a diverse set of skills, including SQL, Python, statistics, Power bi, Tableau,
+            scikit-learn, Pandas, and NumPy.
+          </p>
+          <p></p>
+        </section>
+
+        <!--
+          - service
+        -->
+        <section class="service">
+          <h3 class="h3 service-title"></h3>
+          <ul class="service-list">
+            <li class="service-item">
+            <div class="icon-box">
+              <img src="./assets/images/icons8-data-analysis-53.png" alt="Data Analysis icon" width="40">
+            </div>
+            <div class="service-content-box">
+              <h4 class="h4 service-item-title">Data Analysis</h4>
+              <p class="service-item-text">
+                Cleaning, exploring, and visualizing datasets using Python. Building interactive dashboards with Plotly, Seaborn and Tableau.
+              </p>
+            </div>
+          </li>
+
+          <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icons8-intelligence-artificielle-50 (1).png" alt="Machine learning icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Machine learning</h4>
+
+                <p class="service-item-text">
+                  High-quality development of sites at the professional level.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+              
+                <div class="icon-box">
+                  <img src="./assets/images/icons8-data-pipeline-32.png" alt="Data pipelines" width="40">
+                </div>
+                <div class="service-content-box">
+                  <h4 class="h4 service-item-title">Data Pipelines</h4>
+                  <p class="service-item-text">
+                    Building ETL workflows with Apache Airflow. Experience with SQL databases (PostgreSQL) and NoSQL (MongoDB).
+                  </p>
+                </div>
+              </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+<!--                 <img src="./assets/images/icons8-projects-80.png" alt="Web development icon" width="40"> -->
+                <img src="./assets/images/project gif transparent.gif" alt="Project gif" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Data science projects</h4>
+
+                <p class="service-item-text">
+                  Competing in Kaggle challenges while developing academic and personal projects, 
+                  applying machine learning to solve real-world problems across diverse domains
+                </p>
+              </div>
+
+            </li>
+          </ul>
+        </section>
+
+
+        <section class="skills-carousel">
+          <h3 class="h3 skills-title">Technical Skills</h3>
+          <div class="skills-container">
+            <div class="skills-track">
+              <!-- Première série -->
+              <div class="skill-item">
+                <img width="48" height="48" src="https://img.icons8.com/color/48/python--v1.png" alt="python--v1"/>
+                <span>Python</span>
+              </div>
+              <div class="skill-item">
+                <img width="48" height="48" src="https://img.icons8.com/fluency/48/sql.png" alt="sql"/>
+                <span>SQL</span>
+              </div>
+              <div class="skill-item">
+                <img width="48" height="48" src="https://img.icons8.com/color/48/pandas.png" alt="pandas"/>
+                <span>Pandas</span>
+              </div>
+              <div class="skill-item">
+                <img width="48" height="48" src="https://img.icons8.com/color/48/numpy.png" alt="numpy"/>
+                <span>NumPy</span>
+              </div>
+              <div class="skill-item">
+              <img src="./assets/images/scikit-learn.png" alt="Scikit-learn" width="48" height="48">
+              <span>Scikit-learn</span>
+            </div>
+              <div class="skill-item">
+              <img src="./assets/images/seaborn-seeklogo[1].png" alt="Seaborn" width="48" height="48">
+              <span>Seaborn</span>
+            </div>
+             <div class="skill-item">
+              <img width="48" height="48" src="https://img.icons8.com/color/48/matplotlib.png" alt="matplotlib"/>
+              <span>Matplotlib</span>
+            </div>
+              <div class="skill-item">
+              <img width="48" height="48" src="https://img.icons8.com/color/48/tensorflow.png" alt="tensorflow"/>
+              <span>Tensorflow</span>
+            </div>
+              <div class="skill-item">
+              <img width="48" height="48" src="https://img.icons8.com/material-rounded/24/ff0000/keras.png" alt="keras"/>
+              <span>Keras</span>
+            </div>
+              <div class="skill-item">
+              <img width="48" height="48" src="https://img.icons8.com/color/48/mysql-logo.png" alt="mysql-logo"/>
+              <span>MySQL</span>
+            </div>
+              <div class="skill-item">
+              <img width="48" height="48" src="https://img.icons8.com/color/48/git.png" alt="git"/>
+              <span>Git</span>
+            </div>
+              <div class="skill-item">
+              <img width="48" height="48" src="https://img.icons8.com/color/48/docker.png" alt="docker"/>
+              <span>Docker</span>
+            </div>
+              <div class="skill-item">
+              <img width="48" height="48" src="https://img.icons8.com/fluency/48/power-bi-2021.png" alt="power-bi-2021"/>
+              <span>Power Bi</span>
+            </div>
+              
+              <!-- Doublon pour l'effet infini -->
+              <div class="skill-item">
+                <img width="48" height="48" src="https://img.icons8.com/color/48/python--v1.png" alt="python--v1"/>
+                <span>Python</span>
+              </div>
+              <div class="skill-item">
+                <img width="48" height="48" src="https://img.icons8.com/fluency/48/sql.png" alt="sql"/>
+                <span>SQL</span>
+              </div>
+              <div class="skill-item">
+                <img width="48" height="48" src="https://img.icons8.com/color/48/pandas.png" alt="pandas"/>
+                <span>Pandas</span>
+              </div>
+              <div class="skill-item">
+                <img width="48" height="48" src="https://img.icons8.com/color/48/numpy.png" alt="numpy"/>
+                <span>NumPy</span>
+              </div>
+              <div class="skill-item">
+              <img src="./assets/images/scikit-learn.png" alt="Scikit-learn" width="48" height="48">
+              <span>Scikit-learn</span>
+              </div>
+              <div class="skill-item">
+              <img src="./assets/images/seaborn-seeklogo[1].png" alt="Seaborn" width="48" height="48">
+              <span>Seaborn</span>
+            </div>
+             <div class="skill-item">
+              <img width="48" height="48" src="https://img.icons8.com/color/48/matplotlib.png" alt="matplotlib"/>
+              <span>Matplotlib</span>
+            </div>
+              <div class="skill-item">
+              <img width="48" height="48" src="https://img.icons8.com/color/48/tensorflow.png" alt="tensorflow"/>
+              <span>Tensorflow</span>
+            </div>
+              <div class="skill-item">
+              <img width="48" height="48" src="https://img.icons8.com/material-rounded/24/ff0000/keras.png" alt="keras"/>
+              <span>Keras</span>
+            </div>
+              <div class="skill-item">
+              <img width="48" height="48" src="https://img.icons8.com/color/48/mysql-logo.png" alt="mysql-logo"/>
+              <span>MySQL</span>
+            </div>
+              <div class="skill-item">
+              <img width="48" height="48" src="https://img.icons8.com/color/48/git.png" alt="git"/>
+              <span>Git</span>
+            </div>
+              <div class="skill-item">
+              <img width="48" height="48" src="https://img.icons8.com/color/48/docker.png" alt="docker"/>
+              <span>Docker</span>
+            </div>
+              <div class="skill-item">
+              <img width="48" height="48" src="https://img.icons8.com/fluency/48/power-bi-2021.png" alt="power-bi-2021"/>
+              <span>Power Bi</span>
+            </div>
+          </div>
+        </section>
+        
+      </article>
+
+            
+
+      <!--
+        - #RESUME
+      -->
+      <article class="resume" data-page="resume">
+        <header>
+          <h2 class="h2 article-title">Resume</h2>
+        </header>
+
+        <section class="timeline">
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+            <h3 class="h3">Group Academic Projects</h3>
+          </div>
+          <ol class="timeline-list">
+            <li class="timeline-item">
+            <h4 class="h4 timeline-item-title">PROJECT RFID AND AI LOCALIZATION</h4>
+            <span>NOV 2022 - FEB 2023</span>
+            <ul class="timeline-text">
+              <li>Develop a system that can accurately track and locate RFID-tagged objects in real-time using AI-powered algorithms</li>
+              <li>Conduct multiple tests and simulations to verify the accuracy of the Machine Learning and Deep Learning algorithms</li>
+              <li>Collect and structure RFID data in real-time, improving the current system's performance</li>
+              <li>Design and develop an intuitive and user-friendly data visualization interface</li>
+            </ul>
+          </li>
+
+            <li class="timeline-item">
+            <h4 class="h4 timeline-item-title">PROJECT RFID AND MACHINE LEARNING </h4>
+            <span>APRIL 2022 - MAY 2022</span>
+            <ul class="timeline-text">
+              <li>Data processing and development of predictive models.</li>
+              <li>Realization of a GUI to launch the treatments and to parameterize the predictive models.</li>
+              <li>Connecting Database/C#/Python.</li>
+              <li>Compare the results between the models.</li>
+            </ul>
+          </li>
+          </ol>
+        </section>
+
+        <section class="timeline">
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="briefcase-outline"></ion-icon>
+            </div>
+            <h3 class="h3">Work Experience</h3>
+          </div>
+          <ol class="timeline-list">
+            <li class="timeline-item">
+            <h4 class="h4 timeline-item-title">INTERNSHIP - PYTHON DEVELOPER | RESAAM</h4>
+            <span>JUL 2022 - AUG 2022 (2 monhts)</span>
+            <ul class="timeline-text">
+              <li>Develop and test algorithms to improve health transportation.</li>
+              <li>Design and develop a dashboard on streamlit.</li>
+              <li>Ensure the management, processing and analysis of data models</li>
+              <li>Participate in the implementation of automation processes.</li>
+              <li>Integrate a team of dynamic developers and experts on the subject</li>
+            </ul>
+          </li>
+
+            <li class="timeline-item">
+            <h4 class="h4 timeline-item-title">INTERNSHIP - AGENT DIB | SYNDICAT AZUR</h4>
+            <span>02 August 2021 - 31 August 2021</span>
+            <ul class="timeline-text">
+              <li>Complete administrative documents for the preparation and organization of deliveries.</li>
+              <li>Make deliveries for companies and individuals in 3 major cities</li>
+            </ul>
+          </li>
+          </ol>
+        </section>
+
+        <section class="timeline">
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="school-outline"></ion-icon>
+            </div>
+            <h3 class="h3">Education</h3>
+          </div>
+          <ol class="timeline-list">
+            <li class="timeline-item">
+            <h4 class="h4 timeline-item-title">Engineering degree (Big data), ESIGELEC, Rouen</h4>
+            <span>2020 - 2024 </span>
+            <ul class="timeline-text">
+            </ul>
+          </li>
+
+            <li class="timeline-item">
+            <h4 class="h4 timeline-item-title">Preparatory class PCSI/PSI, lycée Jacques Decour, Paris.</h4>
+            <span>2016 - 2019</span>
+            <ul class="timeline-text">
+            </ul>
+          </li>
+
+            <li class="timeline-item">
+            <h4 class="h4 timeline-item-title">Scientific baccalaureate, Lycée Jean JAURES, Argenteuil.</h4>
+            <span>2013 - 2016</span>
+            <ul class="timeline-text">
+            </ul>
+          </li>
+            
+          </ol>
+        </section>
+      </article>
+    
+
+      <!--
+        - #PORTFOLIO
+      -->
+      <article class="portfolio" data-page="portfolio">
+        <header>
+          <h2 class="h2 article-title">Portfolio</h2>
+        </header>
+
+        <section class="projects">
+          <ul class="filter-list">
+            <li class="filter-item">
+              <button class="active" data-filter-btn>All</button>
+            </li>
+            <li class="filter-item">
+              <button data-filter-btn>Python EDA</button>
+            </li>
+            
+            <li class="filter-item">
+              <button data-filter-btn>Machine Learning Projects</button>
+            </li>
+            
+            <li class="filter-item">
+              <button data-filter-btn>NLP Projects</button>
+            </li>
+          </ul>
+
+          <div class="filter-select-box">
+            <button class="filter-select" data-select>
+              <div class="select-value" data-selecct-value>Select category</div>
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+            </button>
+            <ul class="select-list">
+              <li class="select-item">
+                <button data-select-item>All</button>
+              </li>
+              <li class="select-item">
+                <button data-select-item>Python EDA</button>
+              </li>
+              
+              <li class="select-item">
+                <button data-select-item>Machine Learning Projects</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>NLP Projects</button>
+              </li>
+              
+            </ul>
+          </div>
+
+          <ul class="project-list">
+            <li class="project-item active" data-filter-item data-category="Python EDA">
+              <a href="https://www.kaggle.com/code/adelanseur/global-country-information-eda", target="_blank">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/global country information EDA image.webp" alt="Global country information EDA" loading="lazy">
+                </figure>
+                <h3 class="project-title">Global country information EDA</h3>
+                <p class="project-category">Python EDA</p>
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="Machine Learning Projects">
+              <a href="https://www.kaggle.com/code/adelanseur/ml-eda-apple-quality" , target="_blank">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/apple quality EDA image.webp" alt="ML, EDA | Apple quality" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">ML, EDA | Apple quality</h3>
+
+                <p class="project-category">Machine Learning Projects</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="Python EDA">
+              <a href="https://www.kaggle.com/code/adelanseur/japanese-universities-eda", target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/japanese universities eda image.jpeg" alt="Japanese Universities EDA" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Japanese Universities EDA</h3>
+
+                <p class="project-category">Python EDA</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="Python EDA">
+              <a href="https://www.kaggle.com/code/adelanseur/predict-extrovert-from-introvert-competitions-eda", target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/image introvert-extrovert eda.png" alt="Competition predict introvert-extrovert EDA" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Competition predict introvert-extrovert EDA</h3>
+
+                <p class="project-category">Python EDA</p>
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="Machine Learning Projects">
+              <a href="https://www.kaggle.com/code/adelanseur/manga-sales-eda-ml", target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/manga sales ml image.jpg" alt="Manga sales ML" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Manga sales ML</h3>
+
+                <p class="project-category">Machine Learning Projects</p>
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="Machine Learning Projects">
+              <a href="https://www.kaggle.com/code/adelanseur/superstore-sales-eda-ml", target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/superstore sales ml image.jpg" alt="Superstore Sales ML" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Superstore Sales ML</h3>
+
+                <p class="project-category">Machine Learning Projects</p>
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="Machine Learning Projects">
+              <a href="https://www.kaggle.com/code/adelanseur/clustering-pca-k-means",  target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/Country data ml.jpg" alt="Clustering : PCA| K-Means" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Clustering : PCA| K-Means</h3>
+
+                <p class="project-category">Machine Learning Projects</p>
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="Machine Learning Projects">
+              <a href="https://www.kaggle.com/code/adelanseur/eda-predictive-analysis-most-popular-movies" , target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/most popular movies ml image.png" alt="Most popular movies ml" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Most popular movies ml</h3>
+
+                <p class="project-category">Machine Learning Projects</p>
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="NLP Projects">
+              <a href="https://www.kaggle.com/code/adelanseur/nlp-gru-emotions-analysis", target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/Emotions NLP image.jpg" alt="NLP GRU | Emotions analysis" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">NLP GRU | Emotions analysis</h3>
+
+                <p class="project-category">NLP Projects</p>
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="NLP Projects">
+              <a href="https://www.kaggle.com/code/adelanseur/llm-classification-finetuning-deberta", target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/LLM classification finetuning Kaggle competition image.jpg" alt="LLM Classification finetuning" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">LLM Classification Finetuning Kaggle competition</h3>
+
+                <p class="project-category">NLP Projects</p>
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="All">
+              <a href="https://github.com/Anseuradel/Anseuradel.github.io", target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/Personal portfolio website image.png" alt="Personal portfolio website" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Personal portfolio website</h3>
+
+                <p class="project-category">All</p>
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="NLP Projects">
+              <a href="https://github.com/Anseuradel/MLOps-Project-Sentiment-Analysis", target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/Amazon-Review-Analysis image.webp" alt="MLOps project Sentiment Analysis" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">MLOps sentiment analysis project</h3>
+
+                <p class="project-category">NLP Projects</p>
+              </a>
+            </li>
+            
+          </ul>
+        </section>
+      </article>
+
+      <!--
+        - #CONTACT
+      -->
+      <article class="contact" data-page="contact">
+        <header>
+          <h2 class="h2 article-title">Contact</h2>
+        </header>
+
+        <section class="mapbox" data-mapbox>
+          <figure>
+           <iframe
+              src="https://www.google.com/maps/place/95100+Argenteuil/@48.9500769,2.247767,13z/data=!3m1!4b1!4m6!3m5!1s0x47e66664dfcb055b:0x40b82c3688b36d0!8m2!3d48.9472096!4d2.2466847!16zL20vMDFxbnZu?entry=ttu&g_ep=EgoyMDI1MDcyMy4wIKXMDSoASAFQAw%3D%3D"
+              width="400" height="300" loading="lazy"></iframe>
+          </figure>
+        </section>
+
+        <section class="contact-form">
+        <h3 class="h3 form-title">Contact Form</h3>
+        <form action="https://formspree.io/f/xanboeze" method="POST" class="form" data-form>
+          <div class="input-wrapper">
+            <input type="text" name="name" class="form-input" placeholder="Full name" required data-form-input>
+            <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+          </div>
+          <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+          <div class="g-recaptcha" data-sitekey="6LeXto4rAAAAAKYuMn1r9OJluhkNsznVrIhlJLul"></div>
+          <button class="form-btn" type="submit">
+            <ion-icon name="paper-plane"></ion-icon>
+            <span>Send Message</span>
+          </button>
+        </form>
+      </section>
+      </article>
+
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>
